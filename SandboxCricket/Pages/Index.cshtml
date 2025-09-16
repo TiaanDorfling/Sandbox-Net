@@ -1,10 +1,44 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Cricket Store";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to the cricket center</h1>
+
+    <form method="post">
+        <div>
+            <h3>Select the brand</h3>
+
+            <select asp-for="SelectedBrand" class="form-control">
+                <option value="">-- Select a Brand --</option>
+                @foreach (var brand in Model.Brands)
+                {
+                    <option value="@brand.BrandId">@brand.BrandName</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+
+    @if (Model.SelectedBrand > 0)
+    {
+        <hr />
+        <div class="mt-4">
+            <h2>You selected the @Model.SelectedBrandName bat.</h2>
+
+            <form method="post">
+                <input type="hidden" asp-for="SelectedBrand" />
+
+                <div class="form-group">
+                    <label for="Bat">Bat Details:</label>
+                    <p>@Model.BatDetails</p>
+                </div>
+
+                <button type="submit" class="btn btn-success mt-3">Place Order</button>
+            </form>
+        </div>
+    }
 </div>

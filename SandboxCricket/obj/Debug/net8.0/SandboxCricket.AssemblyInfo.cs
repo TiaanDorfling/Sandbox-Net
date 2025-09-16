@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SandboxCricket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ede64a3d80b8c37f6b7eb4131c4a43812a1a17ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7d243dbd91632e1fab84e77d530ff0b30e99f31")]
 [assembly: System.Reflection.AssemblyProductAttribute("SandboxCricket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SandboxCricket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
